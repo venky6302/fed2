@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title> portfolio </title>
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/9028ddf8ca.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="venky.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                                <h1>
+                    Hi, I'm <span>perumalla venkatesh</span><br> 
+                </h1>
+            </div>
+        </div>
+    </div>
+    <!----------about--------->
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="background.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About</h1>
+                    <p> Venkatesh is a front end developer having sufficient knowledge in HTML,CSS,javascript .</p>
+                    <div  class="tab-titles">
+                      <!---  <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links active-link" onclick="opentab('achievements')">Experience</p>
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>--->
+                        <nav><a href="#skills">skills___</a></nav>
+                        <nav><a href="#achievements">achievements___</a></nav>
+                        <nav><a href="#education">education   </a></nav>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <h3 style="background-color:chartreuse;">skills</h3>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>web Development</span><br>Web app  Development</li>
+                            <li><span>technical skills</span><br><ul><li>c programming</li><li>python programming</li><li>java programming</li><li>c++ programming</li><li>sql</li></ul></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="tab-links" id="achievements">
+                        <ul>
+                            <h3 style="background-color: chartreuse;">achievements</h3>
+                            <li><span>web certificates</span><br><ul><li>udemy web development</li></ul></li>
+                            <li><span>coding certificates</span><br>python basics hackerrank</li>
+                            <li><span>internships</span><br><ul><li>devops</li><li>aws cloud</li></ul></li>
+                            
+                        </ul>
+                    </div><hr>
+                    <div class="tab-links" id="education">
+                        <ul>
+                            <h3 style="background-color:chartreuse;">education</h3>
+                            <li><span>10th satndard</span><br>vikas hisgh school</li>
+                            <li><span>intermediate</span><br>narayana junior college</li>
+                            <li><span>App Development</span><br>vignan's lara institute of technology and sciences</li>
+                        </ul>
+                    </div><hr>
+                </div>
+            </div>
+        </div>
+    </div>
+   <! ------------services---------------->
+   <section id="contact">
+<hr>
+   <center> <h3 style="background-color: darkturquoise;">contact</h3> 
+    <p>6302678728</p></center> 
+    <hr>
+
+   </section>
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementsById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+
+
+
+</body>
+</html>
